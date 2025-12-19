@@ -1,109 +1,104 @@
-# 📞 Call Centre Dashboard: 67 Seconds to Answer, 317 Calls Missed  
-*Uncovering operational insights through Power BI storytelling*
+# 🏥 Healthcare Dashboard: Billing & Patient Insights
 
 ---
 
 ## 🧠 Overview
-This Power BI project explores a **call centre dataset** to reveal how agent efficiency, customer satisfaction, and call resolution vary across products and hours.  
-It highlights **bottlenecks, workload imbalances, and service gaps**, enabling actionable insights for better performance management.
+This Power BI dashboard analyses **healthcare billing and patient data** across multiple hospitals, doctors, and medical conditions.  
+It uncovers **billing patterns, hospital efficiency, and cost trends** to help healthcare managers optimise operations and improve patient care.
 
 ---
 
-## 🎯 Objective
-To build a **real-time operations dashboard** that tracks:
-- Call handling time  
-- Resolution rates  
-- Customer satisfaction  
-- Agent efficiency  
-- Missed call trends  
+## 🚀 Project Objective
+To create a **comprehensive billing and patient insight dashboard** that tracks revenue drivers, stay durations, and cost efficiency in healthcare institutions.
 
 ---
 
-## 🗂️ Dataset
-A call centre dataset containing:  
-`Date, Agent, Product, Call Time, Answer Time, Talk Time, Resolution Status, Customer Rating`
+## 📊 Dataset
+The dataset spans **2019–2024** and includes:  
+`Patient ID, Age, Gender, Medical Condition, Hospital, Doctor, Admission Date, Discharge Date, Consultation Charges, Bed Charges, Total Billing`.
 
-Covers:
-- 8 agents  
-- 5 product categories (TV, AC, Toaster, Fridge, Washing Machine)  
-- Call data over multiple days and hours  
-
----
-
-## 🧹 Data Preparation
-Key cleaning and transformation steps:
-1. Converted timestamps into **hourly buckets** for time-based analysis.  
-2. Created calculated measures:
-   - Average Answer Time  
-   - Resolution Rate (%)  
-   - Missed Calls Count  
-   - Satisfaction Score (avg.)  
-3. Grouped calls by **product, agent, and time of day** for drill-down visuals.  
-4. Filtered invalid or duplicate entries (same call logged twice).  
+Additional sheets contain:
+- Doctor Consultation Charges  
+- Hospital Bed Charges  
+- Medical Condition Costs (e.g., Cancer ₹80,000, Obesity ₹50,000)
 
 ---
 
-## 📊 Dashboard Insights
-
-### 🧠 Operational Intelligence
-- ⏰ **Peak load:** 11 AM (236 calls), 5 PM (218), 9 AM (216)  
-- ⏱️ **Avg. answer time:** 67.2 sec, clustered between 30–90 sec  
-- ✅ **Resolution rate:** 90% overall (TV 91%, AC 92%)  
-
-### 💼 Agent Analytics
-- 🌟 **Martha:** Top satisfaction performer (3.7/5 avg.)  
-- 🧊 **Stewart:** Most efficient (avg. talk time 228 sec)  
-- 📞 **Dan:** Most calls (190) but longest talk time (237 sec)  
-
-### 😀 Customer Experience
-- 😊 **Avg. satisfaction:** 3.45/5  
-- 🧩 **Fridge:** Highest satisfaction (3.52/5)  
-- 📉 **32%** of resolved calls rated just 3/5 — clear improvement scope  
-- ⚡ **Toaster:** Fastest responses (65.79 sec)  
-- ❄️ **AC:** Slowest (68.76 sec)  
-
-### 🔍 Product Analysis
-- 📺 **TV:** Most calls (382), longest talk time (193.4 sec) — complex issue handling  
-- ❌ **AC:** Most unresolved calls — rushed handling suspected  
-
-### 🚫 Unanswered Calls
-- 📉 **317 missed calls** overall  
-- ⏰ **Peak misses:** 11 AM (42), 5 PM  
-- ☎️ **Answer rate:** 82% — strong resolution, weak responsiveness  
+## 🧹 Data Cleaning & Preparation
+Key steps included:
+1. **Data Integration:** Used `VLOOKUP` and `INDEX-MATCH` to merge multi-sheet data (doctors, beds, and medical conditions).  
+2. **Stay Duration Calculation:** Derived hospital stay length from admission and discharge dates.  
+3. **Cost Mapping:** Linked medical conditions (e.g., Asthma, Cancer, Obesity) to treatment costs using conditional logic.  
+4. **Inflation Adjustment:** Adjusted doctor and bed charges annually to reflect realistic cost increases.
 
 ---
 
-## 🔎 Deep Insights
-- ⚖️ **Agent Imbalance:** Dan overburdened; Martha underutilised.  
-- 💬 **TV category:** High complexity → needs better scripts.  
-- ❗ **AC support:** Long waits, poor resolution → requires training.  
-- 🧩 **Answer vs. Resolution gap:** Excellent recovery but poor initial handling.  
+## 📈 Dashboard Insights
+- **Total Patients:** 10,000  
+- **Total Revenue:** ₹2.53 B  
+- **Average Revenue per Patient:** ₹253 K  
+- **Average Stay Duration:** 16 days  
+
+**Doctor Analysis:**  
+- Michael Fisher leads with ₹748 K total and ₹187 K average billing.  
+
+**Hospital Analysis:**  
+- Johnson PLC tops overall billing (₹3.3 M).  
+- Johnson Inc. has the highest bed charge (₹132 K).  
+
+**Medical Condition Trends:**  
+- Cancer → 20% of total revenue  
+- Obesity → 16.33% of total patients  
+- Total billing grew from ₹274 M (2019) → ₹567 M (2023)  
+- Average bed charges rose from ₹8.1 K (2020) → ₹14.1 K (2024)
+
+**Revenue vs. Stay:**  
+Longer hospital stays correlate with higher billing—Cancer patients (15.8 days) generate ₹450 K+ per case.
 
 ---
 
-## ✅ Actionable Recommendations
-1. 🕙 Reinforce **staffing at 11 AM & 5 PM** (peak load hours).  
-2. 📤 **Rebalance workloads** — give more to Martha, ease Dan’s load.  
-3. 🛠️ **Train agents** for TV & AC — customised scripts improve resolution.  
-4. 🧠 **Audit AC quick drops** — identify process inefficiencies.  
-5. 📲 Use **resolution strength** to follow up on missed calls.  
+## 💡 Key Takeaways
+- **Johnson PLC’s** high billing indicates strong operational efficiency—study further.  
+- **Cancer treatment** drives revenue—invest in specialised care.  
+- **Bed charge inflation** (₹14.1 K in 2024) suggests a need for resource optimisation.  
+- **Obesity cases** have long stays (15.19 days)—optimise treatment to reduce costs.  
 
 ---
 
-## 🧰 Tools Used
-- **Power BI:** Data modelling & dashboard creation  
-- **Power Query:** Data cleaning & transformation  
-- **Excel:** Pre-processing and exploratory analysis  
+## 🩺 Recommendations for Hospitals
+1. **Streamline Stay Duration:**  
+   Shorten high-frequency condition stays (e.g., Obesity) through improved protocols to reduce operational cost.  
+
+2. **Expand High-Revenue Services:**  
+   Invest in Cancer care units (20% revenue share) to enhance profitability.  
+
+3. **Optimise Bed Charge Costs:**  
+   Address rising charges via supplier negotiations and better resource allocation.  
+
+4. **Leverage Top Doctor Practices:**  
+   Train others based on Michael Fisher’s efficiency model (₹748 K billing) to raise hospital-wide revenue.  
+
+---
+
+## 🛠️ Tools Used
+- **Power BI:** Dashboard creation & data visualisation  
+- **Microsoft Excel:** Data cleaning & integration  
+- **Power Query:** Data transformation and aggregation  
 
 ---
 
 ## 📚 Learnings
-This project strengthened my ability to:
-- Combine visual storytelling with KPI-based dashboards  
-- Build interactive slicers & visuals in Power BI  
-- Translate raw data into operational narratives for business use  
+This project improved my ability to:
+- Integrate multiple sheets with `VLOOKUP` / `INDEX-MATCH`  
+- Compute time-based KPIs (e.g., stay duration)  
+- Create healthcare-specific dashboards highlighting operational and financial efficiency  
+
+A special thanks to **Rajinder Chitoria** and **Mani Bhushan** for their guidance throughout the project.  
+
+---
 
 ## 📸 Dashboard Preview
-*(Upload your Power BI dashboard screenshots here once added)*  
 
-![Call Centre Dashboard](images/callcentre-dashboard.png)
+![Healthcare Dashboard](Top 7.png)
+
+---
