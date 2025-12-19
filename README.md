@@ -100,4 +100,7 @@ A special thanks to **Rajinder Chitoria** and **Mani Bhushan** for their guidanc
 ## 📸 Dashboard Preview
 
 ![Healthcare Dashboard](Dashboard/Top_7.png)
+![Healthcare Dashboard](Dashboard/Revenue.png)
+![Healthcare Dashboard](Dashboard/Patient_Health.png)
+![Healthcare Dashboard](Dashboard/Revenue_By_Stay_Duration.png)
 ---
